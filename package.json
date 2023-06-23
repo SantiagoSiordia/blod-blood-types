@@ -3,8 +3,17 @@
   "version": "0.0.1",
   "description": "This is a useful package if you're working with blood data in an app.",
   "main": "index.js",
+  "files": ["src/**/*"],
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest --config jestconfig.json",
+    "build": "tsc",
+    "format": "prettier --write \"src/**/*.ts\" \"src/**/*.js\"",
+    "lint": "tslint -p tsconfig.json",
+    "prepare": "npm run build",
+    "prepublishOnly": "npm test && npm run lint",
+    "preversion": "npm run lint",
+    "version": "npm run format && git add -A src",
+    "postversion": "git push && git push --tags"
   },
   "repository": {
     "type": "git",
@@ -12,12 +21,34 @@
   },
   "keywords": [
     "blod",
-    "blood"
+    "blood",
+    "blood types",
+    "blood type",
+    "blood group",
+    "blood groups",
+    "blood group system",
+    "blood group systems",
+    "blood group antigens",
+    "blood group antigen",
+    "blood group antigen system",
+    "blood group antigen systems",
+    "blood group antibodies",
+    "blood group antibody",
+    "blood group antibody system",
+    "blood group antibody systems"
   ],
   "author": "Santi Siordia",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/SantiagoSiordia/blod-blood-types/issues"
   },
-  "homepage": "https://github.com/SantiagoSiordia/blod-blood-types#readme"
+  "homepage": "https://github.com/SantiagoSiordia/blod-blood-types#readme",
+  "devDependencies": {
+    "@types/node": "^20.3.1",
+    "prettier": "^2.8.8",
+    "tslint": "^6.1.3",
+    "tslint-config-prettier": "^1.18.0",
+    "typescript": "^5.1.3"
+  },
+  "dependencies": {}
 }

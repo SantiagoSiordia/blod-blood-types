@@ -1,0 +1,23 @@
+{
+  "name": "@blod/blood-types",
+  "version": "0.0.1",
+  "description": "This is a useful package if you're working with blood data in an app.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/SantiagoSiordia/blod-blood-types.git"
+  },
+  "keywords": [
+    "blod",
+    "blood"
+  ],
+  "author": "Santi Siordia",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SantiagoSiordia/blod-blood-types/issues"
+  },
+  "homepage": "https://github.com/SantiagoSiordia/blod-blood-types#readme"
+}
